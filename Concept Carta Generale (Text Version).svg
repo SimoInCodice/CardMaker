@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.58 249.45">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-5 {
+        stroke-width: .57px;
+      }
+
+      .cls-2 {
+        stroke-width: 5.67px;
+      }
+
+      .cls-3 {
+        stroke-width: .28px;
+      }
+
+      .cls-4 {
+        stroke-width: .71px;
+      }
+
+      .cls-6 {
+        fill: #1d1d1b;
+        font-family: MyriadPro-Regular, 'Myriad Pro';
+        font-size: 6.38px;
+      }
+
+      .cls-5 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Sfondo_Carta">
+    <rect id="Cornice" class="cls-2" x="2.83" y="2.83" width="172.91" height="243.78" rx="4.3" ry="4.3"/>
+  </g>
+  <g id="Fondamenta_Carta">
+    <rect id="Barra_Generale" class="cls-1" x="5.39" y="5.67" width="167.81" height="19.84"/>
+    <rect id="Cornice_Foto" class="cls-3" x="11.34" y="27.02" width="155.91" height="87.7"/>
+    <rect id="Barra_Informazioni" class="cls-4" x="8.5" y="116.22" width="161.57" height="17.01" rx="2.85" ry="2.85"/>
+    <line id="Linea_Attributi_1" class="cls-5" x1="5.67" y1="136.06" x2="172.91" y2="136.06"/>
+    <line id="Linea_Generiche" class="cls-5" x1="5.67" y1="238.11" x2="172.91" y2="238.11"/>
+  </g>
+  <g id="Attributi_Dinamici" data-name="Attributi Dinamici">
+    <g id="Generiche">
+      <g id="Copyright">
+        <text id="Carattere_Copyright"/>
+      </g>
+      <g id="Codice_Espansione">
+        <text id="Carattere_Collezione" class="cls-6" transform="translate(8.5 242.64) scale(1.48 1)"><tspan x="0" y="0"> </tspan></text>
+      </g>
+      <g id="Rarità">
+        <rect id="Icona_Rarità" class="cls-5" x="158.74" y="238.11" width="11.34" height="5.67"/>
+      </g>
+    </g>
+    <g id="Effetti_Totali">
+      <g id="Effetti">
+        <text id="Carattere_Effetti"/>
+      </g>
+    </g>
+    <g id="Descrizione">
+      <g id="Informazioni_Generali">
+        <text id="Carattere_Informazioni"/>
+      </g>
+    </g>
+    <g id="Principale">
+      <g id="Nome">
+        <text id="Carattere_Nome"/>
+      </g>
+      <g id="Immagine">
+        <rect id="Margine_Immagine" class="cls-3" x="11.34" y="27.02" width="155.91" height="87.7"/>
+      </g>
+    </g>
+  </g>
+</svg>

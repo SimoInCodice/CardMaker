@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.58 249.45">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        fill: #fff;
+      }
+
+      .cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6 {
+        stroke: #1d1d1b;
+        stroke-miterlimit: 10;
+      }
+
+      .cls-1, .cls-5 {
+        stroke-width: .57px;
+      }
+
+      .cls-2 {
+        stroke-width: 5.67px;
+      }
+
+      .cls-3, .cls-6 {
+        stroke-width: .28px;
+      }
+
+      .cls-4 {
+        stroke-width: .71px;
+      }
+
+      .cls-5, .cls-6 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <g id="Sfondo_Carta">
+    <rect id="Cornice" class="cls-2" x="2.83" y="2.83" width="172.91" height="243.78" rx="4.3" ry="4.3"/>
+  </g>
+  <g id="Fondamenta_Carta">
+    <rect id="Barra_Generale" class="cls-1" x="5.39" y="5.66" width="167.81" height="19.87"/>
+    <rect id="Barra_Generale_2" class="cls-6" x="7.09" y="7.09" width="164.41" height="17.01"/>
+    <rect id="Cornice_Foto" class="cls-3" x="11.34" y="27.02" width="155.91" height="87.7"/>
+    <rect id="Barra_Informazioni" class="cls-4" x="8.5" y="116.22" width="161.57" height="17.01" rx="2.85" ry="2.85"/>
+    <line id="Linea_Effetti_1" class="cls-6" x1="5.67" y1="167.24" x2="172.91" y2="167.24"/>
+    <line id="Linea_Competenza_Iniziativa_1" class="cls-5" x1="153.07" y1="164.41" x2="153.07" y2="136.06"/>
+    <line id="Linea_Competenza_Iniziativa_2" class="cls-5" x1="153.07" y1="150.24" x2="161.57" y2="150.24"/>
+    <line id="Linea_Competenza_Iniziativa_2-2" data-name="Linea_Competenza_Iniziativa_2" class="cls-5" x1="168.66" y1="150.24" x2="177.17" y2="150.24"/>
+    <line id="Linea_Attributi_1" class="cls-5" x1="5.67" y1="136.06" x2="172.91" y2="136.06"/>
+    <line id="Linea_Attributi_2" class="cls-5" x1="5.67" y1="164.41" x2="172.91" y2="164.41"/>
+    <line id="Linea_Generiche" class="cls-5" x1="5.67" y1="238.11" x2="172.91" y2="238.11"/>
+    <g id="Fondamenta_Portamento">
+      <rect id="Portamento" class="cls-5" x="152.38" y="217.08" width="17.01" height="17.01" transform="translate(-112.39 179.84) rotate(-45)"/>
+    </g>
+  </g>
+  <g id="Attributi_Dinamici" data-name="Attributi Dinamici">
+    <g id="Generiche">
+      <g id="Copyright">
+        <rect id="Carattere_Copyright" class="cls-5" x="60.94" y="238.11" width="96.38" height="5.67"/>
+      </g>
+      <g id="Codice_Espansione">
+        <rect id="Carattere_Collezione" class="cls-5" x="8.5" y="238.11" width="51.02" height="5.67"/>
+      </g>
+      <g id="Rarità">
+        <rect id="Icona_Rarità" class="cls-5" x="158.74" y="238.11" width="11.34" height="5.67"/>
+      </g>
+    </g>
+    <g id="Livello">
+      <rect id="Numero_Livello" class="cls-5" x="155.22" y="219.68" width="11.34" height="11.34"/>
+    </g>
+    <g id="Portamento-2" data-name="Portamento">
+      <rect id="Colore_Portamento" class="cls-5" x="152.38" y="217.08" width="17.01" height="17.01" transform="translate(-112.39 179.84) rotate(-45)"/>
+    </g>
+    <g id="Effetti_Totali">
+      <g id="Fazione">
+        <rect id="Carattere_Fazione" class="cls-3" x="5.67" y="167.24" width="167.24" height="14.17"/>
+      </g>
+      <g id="Effetti">
+        <rect id="Carattere_Effetti" class="cls-3" x="5.67" y="181.42" width="167.24" height="31.17"/>
+      </g>
+      <g id="Passive">
+        <rect id="Carattere_Passive" class="cls-3" x="5.67" y="212.59" width="142.41" height="25.52"/>
+      </g>
+    </g>
+    <g id="Attributi_2" data-name="Attributi 2">
+      <g id="Iniziativa">
+        <rect id="Valore_Iniziativa" class="cls-3" x="153.07" y="150.24" width="19.84" height="14.17"/>
+      </g>
+      <g id="Competenza">
+        <rect id="Valore_Competenza" class="cls-3" x="153.07" y="136.06" width="19.84" height="14.17"/>
+      </g>
+    </g>
+    <g id="Attributi">
+      <g id="Resistenza">
+        <rect id="Valore_Resistenza" class="cls-3" x="127.56" y="136.06" width="19.84" height="14.17"/>
+        <rect id="Carattere_Resistenza" class="cls-3" x="107.72" y="136.06" width="19.84" height="14.17"/>
+      </g>
+      <g id="Difesa">
+        <rect id="Valore_Difesa" class="cls-3" x="79.37" y="136.06" width="19.84" height="14.17"/>
+        <rect id="Carattere_Difesa" class="cls-3" x="59.53" y="136.06" width="19.84" height="14.17"/>
+      </g>
+      <g id="Attacco">
+        <rect id="Valore_Attacco" class="cls-3" x="31.18" y="136.06" width="19.84" height="14.17"/>
+        <rect id="Carattere_Attacco" class="cls-3" x="11.34" y="136.06" width="19.84" height="14.17"/>
+      </g>
+      <g id="Aura">
+        <rect id="Valore_Aura" class="cls-3" x="31.18" y="150.24" width="19.84" height="14.17"/>
+        <rect id="Carattere_Aura" class="cls-3" x="11.34" y="150.24" width="19.84" height="14.17"/>
+      </g>
+      <g id="Tecnica">
+        <rect id="Valore_Tecnica" class="cls-3" x="79.37" y="150.24" width="19.84" height="14.17"/>
+        <rect id="Carattere_Tecnica" class="cls-3" x="59.53" y="150.24" width="19.84" height="14.17"/>
+      </g>
+      <g id="Grinta">
+        <rect id="Valore_Grinta" class="cls-3" x="127.56" y="150.24" width="19.84" height="14.17"/>
+        <rect id="Carattere_Grinta" class="cls-3" x="107.72" y="150.24" width="19.84" height="14.17"/>
+      </g>
+    </g>
+    <g id="Descrizione">
+      <g id="Genere_Razza">
+        <rect id="Carattere_Razza_Tipo" class="cls-3" x="11.34" y="117.64" width="79.37" height="8.5"/>
+      </g>
+      <g id="Taglia">
+        <rect id="Carattere_Taglia" class="cls-3" x="93.54" y="116.22" width="28.35" height="8.5"/>
+      </g>
+      <g id="Peso">
+        <rect id="Carattere_Peso" class="cls-3" x="93.54" y="124.72" width="28.35" height="8.5"/>
+      </g>
+      <g id="Movimento">
+        <rect id="Carattere_Movimento" class="cls-3" x="123.31" y="116.22" width="42.52" height="8.5"/>
+      </g>
+      <g id="Salto">
+        <rect id="Carattere_Salto" class="cls-3" x="123.31" y="124.72" width="42.52" height="8.5"/>
+      </g>
+    </g>
+    <g id="Principale">
+      <g id="Nome">
+        <rect id="Carattere_Nome" class="cls-6" x="7.09" y="7.09" width="141.73" height="17.01"/>
+      </g>
+      <g id="Punti__Salute" data-name="Punti _Salute">
+        <rect id="Carattere_Punti_Vita" class="cls-6" x="148.82" y="7.09" width="22.68" height="8.5"/>
+      </g>
+      <g id="Elementi">
+        <rect id="Icona_Elemento_1" class="cls-6" x="148.82" y="15.59" width="11.34" height="8.5"/>
+        <rect id="Icona_Elemento_2" class="cls-6" x="160.16" y="15.59" width="11.34" height="8.5"/>
+      </g>
+      <g id="Immagine">
+        <rect id="Margine_Immagine" class="cls-3" x="11.34" y="27.02" width="155.91" height="87.7"/>
+      </g>
+    </g>
+  </g>
+</svg>
