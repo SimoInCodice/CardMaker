@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>test svg</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body style="background-color: red;">
     <div id="svgSpace">
-        <svg id="card" width="50%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.58 249.45">
+        <svg id="card" width="40%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.58 249.45">
         <defs>
             <style>
             .cls-1, .cls-2, .cls-3, .cls-4 {
@@ -284,7 +286,50 @@
         </g>
         </svg>
     </div>
+    <!-- Text Modal -->
+    <div class="modal fade" id="textModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modifica il testo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="testoNuovo">Testo</label>
+                <input type="text" name="testoNuovo" id="testoNuovo">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button  id="textModalSaveBtn" type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+    <!-- Image Modal -->
+    <div class="modal fade" id="imageModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Modifica l'immagine</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <label for="newImage">Immagine</label>
+                <input type="file" name="newImage" id="newImage">
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    
     <script>
+        /*
         const card = document.querySelector("#card");
         const cardTexts = card.querySelectorAll("[id] text");
         const cardImgs = card.querySelectorAll("[id] image");
@@ -304,9 +349,6 @@
             console.log("Ciao");
         }));
 
-
-
-
         // Test rect stroke
         const rect = document.querySelector("#rect-test");
         // Rect border width
@@ -317,49 +359,62 @@
         const image = document.querySelector("#Sfondo_Immagine");
         console.log(image);
         // Subtract the border from the size of the image
-        image.width.baseVal.value -= rectBorderWidth;
-        image.height.baseVal.value -= rectBorderWidth;
+        //image.width.baseVal.value -= rectBorderWidth;
+        //image.height.baseVal.value -= rectBorderWidth;
         // Increment the x and y values
 
-        const offset = 0.025;
+        const offset = 0;//0.0125;
 
-        image.x.baseVal.value += (rectBorderWidth / 2) + offset;
-        image.y.baseVal.value += (rectBorderWidth / 2) + offset;
-    </script>
-    <div id="contextMenu" class="context-menu" style="display:none; position: absolute;">
-        <ul>
-            <li><a href="#">Element-1</a></li>
-            <li><a href="#">Element-2</a></li>
-            <li><a href="#">Element-3</a></li>
-            <li><a href="#">Element-4</a></li>
-            <li><a href="#">Element-5</a></li>
-            <li><a href="#">Element-6</a></li>
-            <li><a href="#">Element-7</a></li>
-        </ul>
-    </div>
+        //image.x.baseVal.value += (rectBorderWidth / 2) + offset;
+        //image.y.baseVal.value += (rectBorderWidth / 2) + offset;
+        */
 
-    <script>
-        document.onclick = hideMenu;
-        document.oncontextmenu = rightClick;
 
-        function hideMenu() {
-            document.getElementById(
-                "contextMenu").style.display = "none"
-        }
+        // Init the custom context menu action
+        /* Selected target obj */
+        let targetObj = null;
+        // Pointing to the modals
+        const bTextModal = new bootstrap.Modal("#textModal");
+        const bImageModal = new bootstrap.Modal("#imageModal");
+        console.log(bTextModal);
+        // Pointing the the DOM objects
+        // Pointing to the modals
+        /* Text modal */
+        const textModal = document.querySelector("#textModal");
+        const textInput = textModal.querySelector("#testoNuovo");
+        /* Text modal save changes button action */
+        textModal.querySelector("#textModalSaveBtn").addEventListener("click", (e) => {
+            // Check the obj tag
+            if (targetObj.localName !== "text") return alert("Errore: Non è stato possibile modificare il testo");
+            // Modify the text of the targetObj
+            targetObj.textContent = textInput.value;
+            // Hide the modal
+            bTextModal.hide();
+        });
 
-        function rightClick(e) {
+
+        const imageModal = document.querySelector("#imageModal");
+
+        document.oncontextmenu = (e) => {
+            // Block the normal activity of the context menu
             e.preventDefault();
-
-            if (!cardElements.includes(e.target)) return;
-
-            console.log(e);
-            let menu = document
-                .getElementById("contextMenu")
-
-            menu.style.display = 'block';
-            menu.style.left = e.pageX + "px";
-            menu.style.top = e.pageY + "px";
-        }
+            console.log(e.target.localName);
+            const target = e.target;
+            // Save the target
+            targetObj = target;
+            const targetTag = e.target.localName;
+            // Check the tag
+            if (targetTag === "text") {
+                bTextModal.show();
+                // Change the text inside the input to the content of the selected text
+                const text = target.textContent;
+                console.log(text);
+                textInput.value = text;
+            } else if (targetTag === "image") {
+                bImageModal.show();
+            }
+        };
     </script>
+
 </body>
 </html>
