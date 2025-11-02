@@ -295,8 +295,8 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <label for="testoNuovo">Testo</label>
-                <input type="text" name="testoNuovo" id="testoNuovo">
+                <label id="newTextLabel" for="newText">Testo</label>
+                <input type="text" name="newText" id="newText">
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -314,7 +314,7 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-                <label for="newImage">Immagine</label>
+                <label id="newImageLabel" for="newImage">Immagine</label>
                 <input type="file" name="newImage" id="newImage">
             </div>
             <div class="modal-footer">
@@ -381,7 +381,8 @@
         // Pointing to the modals
         /* Text modal */
         const textModal = document.querySelector("#textModal");
-        const textInput = textModal.querySelector("#testoNuovo");
+        const textInput = textModal.querySelector("#newText");
+        const textLabel = document.querySelector("#newTextLabel");
         /* Text modal save changes button action */
         textModal.querySelector("#textModalSaveBtn").addEventListener("click", (e) => {
             // Check the obj tag
@@ -393,7 +394,8 @@
         });
 
         const imageModal = document.querySelector("#imageModal");
-        const imageInput = imageModal.querySelector("#newImage");
+        const imageInput = document.querySelector("#newImage");
+        const imageLabel = document.querySelector("#newImageLabel");
         /* Image modal save changes button action */
         imageModal.querySelector("#imageModalSaveBtn").addEventListener("click", (e) => {
             // Check the obj tag
@@ -433,8 +435,14 @@
                 const text = target.textContent;
                 console.log(text);
                 textInput.value = text;
+                // Insert the element id into the input label
+                console.log(textLabel.innerText);
+                textLabel.innerText = `Testo (${target.id})`;
             } else if (targetTag === "image") {
                 bImageModal.show();
+                // Insert the element id into the input label
+                console.log(textLabel.innerText);
+                imageLabel.innerText = `Immagine (${target.id})`;
             }
         };
     </script>
