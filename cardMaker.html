@@ -197,7 +197,7 @@
                 <text id="Carattere_Copyright" class="cls-13" transform="translate(84.6 242.61)">Copyright</text>
             </g>
             <g id="Codice_Espansione">
-                <text id="Carattere_Collezione" class="cls-11" transform="translate(34.02 242.79) scale(1 1.1)"></text>
+                <text id="Carattere_Collezione" class="cls-11" transform="translate(34.02 242.79) scale(1 1.1)">Codice Espansione</text>
             </g>
             <g id="Rarità">
                 <rect id="Icona_Rarità" class="cls-5" x="158.74" y="238.11" width="11.34" height="5.67"/>
@@ -250,7 +250,7 @@
             </g>
             <g id="Descrizione">
             <g id="Genere_Razza">
-                <text id="Carattere_Tipo_Razza" class="cls-9" transform="translate(11.34 124.09)"></text>
+                <text id="Carattere_Tipo_Razza" class="cls-9" transform="translate(11.34 124.09)">Genere Razza</text>
             </g>
             <g id="Taglia">
                 <text id="Carattere_Taglia" class="cls-9" transform="translate(75.12 122.67)">Taglia:</text>
@@ -267,10 +267,10 @@
             </g>
             <g id="Principale">
             <g id="Nome">
-                <text id="Carattere_Nome" class="cls-7" transform="translate(9.92 20.76)"></text>
+                <text id="Carattere_Nome" class="cls-7" transform="translate(9.92 20.76)">Nome</text>
             </g>
             <g id="Punti_Salute">
-                <text id="Carattere_Punti_Vita" class="cls-10" transform="translate(148.82 13.56) scale(.9 1)">HP</text>
+                <text id="Carattere_Punti_Vita" class="cls-10" transform="translate(148.82 13.56) scale(.9 1)">HP x</text>
             </g>
             <g id="Elementi">
                 <rect class="cls-6" x="148.82" y="15.59" width="11.34" height="8.5"/>
@@ -319,7 +319,7 @@
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
+                <button id="imageModalSaveBtn" type="button" class="btn btn-primary">Save changes</button>
             </div>
             </div>
         </div>
@@ -392,8 +392,31 @@
             bTextModal.hide();
         });
 
-
         const imageModal = document.querySelector("#imageModal");
+        const imageInput = imageModal.querySelector("#newImage");
+        /* Image modal save changes button action */
+        imageModal.querySelector("#imageModalSaveBtn").addEventListener("click", (e) => {
+            // Check the obj tag
+            if (targetObj.localName !== "image") return alert("Errore: Non è stato possibile modificare l'immagine");
+            // Base64 of the file
+            const [file] = imageInput.files;
+            if (!file) return alert("Errore: Non è stata caricata un'immagine");
+            const fileReader = new FileReader();
+            fileReader.readAsDataURL(file);
+            fileReader.onloadend = (e) => {
+                const result = e.currentTarget.result;
+                // Modify the href of the targetObj
+                targetObj.href.baseVal = result;
+                console.log(targetObj.href);
+            }
+            // Hide the modal
+            bImageModal.hide();
+        });
+
+        // When a user upload an image
+        imageInput.addEventListener("input", (e) => {
+            
+        });
 
         document.oncontextmenu = (e) => {
             // Block the normal activity of the context menu
