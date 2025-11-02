@@ -437,12 +437,12 @@
                 textInput.value = text;
                 // Insert the element id into the input label
                 console.log(textLabel.innerText);
-                textLabel.innerText = `Testo (${target.id})`;
+                textLabel.innerText = target.id;
             } else if (targetTag === "image") {
                 bImageModal.show();
                 // Insert the element id into the input label
                 console.log(textLabel.innerText);
-                imageLabel.innerText = `Immagine (${target.id})`;
+                imageLabel.innerText = target.id;
             }
         };
     </script>
