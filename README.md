@@ -1,7 +1,7 @@
 # CardMaker v1.0
 
 ## Major features
-- Single type of card (model)
+- SVG editable model (for now only one model is available)
 - Image and text editor with a modal
 
 ### Future implementetions
