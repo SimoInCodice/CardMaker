@@ -8,8 +8,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 </head>
 <body style="background-color: red;">
-    <div id="svgSpace">
-        <svg id="card" width="40%" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.58 249.45">
+    <div id="svgCard" class="container-fluid text-center">
+        <svg id="card" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 178.58 249.45">
         <defs>
             <style>
             .cls-1, .cls-2, .cls-3, .cls-4 {
@@ -301,8 +301,8 @@
                 <p id="newTextError" class="text-danger text-center"></p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button  id="textModalSaveBtn" type="button" class="btn btn-success">Save changes</button>
+                <button id="textModalCloseBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="textModalSaveBtn" type="button" class="btn btn-success">Save changes</button>
             </div>
             </div>
         </div>
@@ -320,7 +320,7 @@
                 <input type="file" name="newImage" id="newImage">
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button id="imageModalCloseBtn" type="button" class="btn btn-secondary">Close</button>
                 <button id="imageModalSaveBtn" type="button" class="btn btn-success">Save changes</button>
             </div>
             </div>
@@ -354,6 +354,15 @@
             if (!textInput.value) return alert("Non è possibile lasciare un campo testo vuoto");
             // Modify the text of the targetObj
             targetObj.textContent = textInput.value;
+            // Remove the error message
+            textError.textContent = "";
+            // Hide the modal
+            bTextModal.hide();
+        });
+        /* Text modal close button action */
+        textModal.querySelector("#textModalCloseBtn").addEventListener("click", (e) => {
+            // Remove the error message
+            textError.textContent = "";
             // Hide the modal
             bTextModal.hide();
         });
