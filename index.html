@@ -301,7 +301,7 @@
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Modifica il testo</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button id="textModalCloseXBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <label id="newTextLabel" for="newText">Testo</label>
@@ -321,14 +321,14 @@
             <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Modifica l'immagine</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button id="imageModalCloseXBtn" type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
                 <label id="newImageLabel" for="newImage">Immagine</label>
                 <input type="file" name="newImage" id="newImage">
             </div>
             <div class="modal-footer">
-                <button id="imageModalCloseBtn" type="button" class="btn btn-secondary">Close</button>
+                <button id="imageModalCloseBtn" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                 <button id="imageModalSaveBtn" type="button" class="btn btn-success">Save changes</button>
             </div>
             </div>
@@ -356,8 +356,12 @@
         const textInput = document.querySelector("#newText");
         const textLabel = document.querySelector("#newTextLabel");
         const textError = document.querySelector("#newTextError");
+        /* Buttons */
+        const textModalSaveBtn = document.querySelector("#textModalSaveBtn");
+        const textModalCloseBtn = document.querySelector("#textModalCloseBtn");
+        const textModalCloseXBtn = document.querySelector("#textModalCloseXBtn");
         /* Text modal save changes button action */
-        textModal.querySelector("#textModalSaveBtn").addEventListener("click", (e) => {
+        textModalSaveBtn.addEventListener("click", (e) => {
             // Check the obj tag
             if (targetObj.localName !== "text") return alert("Errore: Non è stato possibile modificare il testo");
             // Alert the user about the blank text field
@@ -369,13 +373,17 @@
             // Hide the modal
             bTextModal.hide();
         });
-        /* Text modal close button action */
-        textModal.querySelector("#textModalCloseBtn").addEventListener("click", (e) => {
+        /* Modal close action */
+        textModal.addEventListener("hide.bs.modal", (e) => {
             // Remove the error message
             textError.textContent = "";
-            // Hide the modal
-            bTextModal.hide();
         });
+        /*
+        // Close button action
+        textModalCloseBtn.addEventListener("click", closeTextModalAction);
+        // Close button (X) action
+        textModalCloseXBtn.addEventListener("click", closeTextModalAction);
+        */
         /* When the user is typing in something */
         textInput.addEventListener("input", (e) => {
             // Check if the field is blank
@@ -392,8 +400,12 @@
         const imageModal = document.querySelector("#imageModal");
         const imageInput = document.querySelector("#newImage");
         const imageLabel = document.querySelector("#newImageLabel");
+        /* Buttons */
+        const imageModalSaveBtn = document.querySelector("#imageModalSaveBtn");
+        const imageModalCloseBtn = document.querySelector("#imageModalCloseBtn");
+        const imageModalCloseXBtn = document.querySelector("#imageModalCloseXBtn");
         /* Image modal save changes button action */
-        imageModal.querySelector("#imageModalSaveBtn").addEventListener("click", (e) => {
+        imageModalSaveBtn.addEventListener("click", (e) => {
             // Check the obj tag
             if (targetObj.localName !== "image") return alert("Errore: Non è stato possibile modificare l'immagine");
             // Base64 of the file
