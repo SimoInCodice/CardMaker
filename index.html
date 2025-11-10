@@ -405,10 +405,13 @@
                 const result = e.currentTarget.result;
                 // Modify the href of the targetObj
                 targetObj.href.baseVal = result;
+                targetObj.href = result;
                 console.log(targetObj.href);
             }
             // Hide the modal
             bImageModal.hide();
+            // Clear the image input
+            imageInput.value = null;
         });
 
         // When a user upload an image
@@ -433,7 +436,6 @@
                 console.log(text);
                 textInput.value = text;
                 // Insert the element id into the input label
-                console.log(textLabel.innerText);
                 textLabel.innerText = target.id;
             } else if (targetTag === "image") {
                 bImageModal.show();
@@ -475,7 +477,7 @@
         // Download the card on the click
         document.querySelector("#downloadBtn").addEventListener("click", async (e) => {
             console.log(card);
-            await downloadCard(card, 1);
+            await downloadCard(card, 4);
         });
     </script>
 
