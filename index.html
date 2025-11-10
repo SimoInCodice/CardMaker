@@ -203,7 +203,7 @@
                 </g>
                 <g id="Rarità">
                     <rect class="cls-5" x="158.74" y="238.11" width="11.34" height="5.67"/>
-                    <image id="Icona_Rarità" x="158.74" y="238.11" width="11.34" height="5.67" preserveAspectRatio="none" href="https://img.freepik.com/free-vector/random-fun-hand-drawn-doodle-pattern-background_1048-19869.jpg?semt=ais_hybrid&w=740&q=80" alt=""></image>
+                    <image id="Icona_Rarità" x="158.74" y="238.11" width="11.34" height="5.67" preserveAspectRatio="none" href="./images/trasparent_image.png" alt=""></image>
                 </g>
                 </g>
                 <g id="Livello">
@@ -277,13 +277,13 @@
                 </g>
                 <g id="Elementi">
                     <rect class="cls-6" x="148.82" y="15.59" width="11.34" height="8.5"/>
-                    <image id="Icona_Elemento_1" x="148.82" y="15.59" width="11.34" height="8.5" href="https://external-preview.redd.it/pWx69bKKAd3lYYR0ek80B9UPgfjmlVL15Q_GE_u1nw0.jpg?auto=webp&s=b815a5db2c4d52855c9cada97d5b9f16bfbe78d7" alt=""></image>
+                    <image id="Icona_Elemento_1" x="148.82" y="15.59" width="11.34" height="8.5" preserveAspectRatio="none" href="./images/trasparent_image.png" alt=""></image>
                     <rect class="cls-6" x="160.16" y="15.59" width="11.34" height="8.5"/>
-                    <image id="Icona_Elemento_2" x="160.16" y="15.59" width="11.34" height="8.5" href="https://i.pinimg.com/736x/4f/e9/0d/4fe90d2ec4bf5618a7584b8f21f65d1c.jpg" alt=""></image>
+                    <image id="Icona_Elemento_2" x="160.16" y="15.59" width="11.34" height="8.5" preserveAspectRatio="none" href="./images/trasparent_image.png" alt=""></image>
                 </g>
                 <g id="Immagine">
                     <rect style="stroke-width: 1px;" class="cls-3" x="11.34" y="27.02" width="155.91" height="87.7" fill="rgba(124,240,10,0.5)"></rect>
-                    <image id="Sfondo_Immagine" width="155.91" height="87.7" x="11.34" y="27.02" preserveAspectRatio="none" href="https://c4.wallpaperflare.com/wallpaper/586/603/742/minimalism-4k-for-mac-desktop-wallpaper-preview.jpg" alt=""></image>
+                    <image id="Sfondo_Immagine" width="155.91" height="87.7" x="11.34" y="27.02" preserveAspectRatio="none" href="./images/trasparent_image.png" alt=""></image>
                 </g>
                 </g>
             </g>
@@ -417,7 +417,6 @@
                 const result = e.currentTarget.result;
                 // Modify the href of the targetObj
                 targetObj.href.baseVal = result;
-                targetObj.href = result;
                 console.log(targetObj.href);
             }
             // Hide the modal
@@ -450,6 +449,7 @@
                 // Insert the element id into the input label
                 textLabel.innerText = target.id;
             } else if (targetTag === "image") {
+                console.log(e.target.href);
                 bImageModal.show();
                 // Insert the element id into the input label
                 console.log(textLabel.innerText);
